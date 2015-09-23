@@ -4,11 +4,15 @@
 
 from pyModbusTCP import constants as const
 import re
-import socket
 import select
 import struct
 import random
 
+from sys import platform
+if platform.startswith('linux') or platform.startswith('darwin'):
+    import socket
+if platform.startswith('win') or platform.startswith('cygwin'):
+    from win_inet_pton import socket
 
 class ModbusClient:
 
@@ -902,3 +906,15 @@ class ModbusClient:
         """
         if self.__debug:
             print(msg)
+
+    def read_device_info(self):
+        tx_buffer = self._mbus_frame(const.MODBUS_ENCAPSULATED_INTERFACE,  
+            struct.pack(">BBB", 0xE, 1, 0))
+        s_send = self._send_mbus(tx_buffer)
+
+        if not s_send:
+            return None
+
+        f_body = self._recv_mbus()
+
+        return f_body
