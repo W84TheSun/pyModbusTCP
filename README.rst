@@ -13,8 +13,8 @@ The module is currently test on Python 2.6, 2.7, 3.2, 3.3 and 3.4.
 
 Status:
 
-.. image:: https://api.travis-ci.org/sourceperl/pyModbusTCP.svg?branch=master
-  :target: http://travis-ci.org/sourceperl/pyModbusTCP
+.. image:: https://api.travis-ci.org/W84TheSun/pyModbusTCP.svg?branch=master
+  :target: http://travis-ci.org/W84TheSun/pyModbusTCP
 
 Setup
 -----
