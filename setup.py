@@ -1,11 +1,11 @@
 from pyModbusTCP import constants
-from distutils.core import setup
+from setuptools import setup
 
 with open('README.rst') as f:
     readme = f.read()
 
 requires = [
-    "win_inet_pton=>1.0.1",
+    "win_inet_pton>=1.0.1",
 ]
 
 setup(
