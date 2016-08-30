@@ -31,7 +31,7 @@ GitHub:
 
 ::
 
-    git clone https://github.com/sourceperl/pyModbusTCP.git  
+    git clone https://github.com/W84TheSun/pyModbusTCP.git  
     cd pyModbusTCP  
     sudo python setup.py install  
 
@@ -75,5 +75,4 @@ Write value 44 and 55 to registers at modbus address 10 :
 Documentation
 -------------
 
-Documentation available online at http://pythonhosted.org/pyModbusTCP and on
-doc/html/index.html.
+Documentation available online on doc/html/index.html.
